@@ -1,7 +1,7 @@
 const { User, Thought } = require('../models');
 
 module.exports = {
-    //Thought is pulled in json format to allow easy reading 
+//Thought is pulled in json format to allow easy reading 
     async getThought(req, res) {
         try {
             const thought = await Thought.find();
@@ -11,11 +11,10 @@ module.exports = {
         }
     },
 
-    //Using the GET method for one thought via id
-
+//Using the GET method for one thought via id
     async getSingleThought(req, res) {
-        try{
-            const thought = await Thought.findOne({_id: req.params.thoughtId });
+        try {
+            const thought = await Thought.findOne({ _id: req.params.thoughtId });
 
             if (!thought) {
                 return res.status(404).json({ message: 'No thought in this brain' });
@@ -26,11 +25,12 @@ module.exports = {
             res.status(500).json(err)
         }
     },
-    //Creates a thought with POST 
+
+//Creates a thought with POST 
     async createThought(req, res) {
         try {
-            const thought = await Thought.create(req.)
-            // WHAT GOES HERE ?!
+            const thought = await Thought.create(req.body)
+            // WHAT GOES HERE ?! (body)
             const user = await User.findOneAndUpdate(
                 { _id: req.body.userId },
                 { $addToSet: { posts: post._id } },
@@ -38,15 +38,15 @@ module.exports = {
             );
             if (!user) {
                 return res
-                  .status(404)
-                  .json({ message: 'Thought created, but valid user with that ID' });
-              }
-        
-              res.json('thought created! 🎉');
-            } catch (err) {
-              console.log(err);
-              res.status(500).json(err);
+                    .status(404)
+                    .json({ message: 'Thought created, but no valid user ID' });
             }
+
+            res.json('thought created! 🎉');
+        } catch (err) {
+            console.log(err);
+            res.status(500).json(err);
         }
-    }
-}
+    },
+};
+

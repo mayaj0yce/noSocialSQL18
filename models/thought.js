@@ -22,4 +22,5 @@ const thoughtSchema = new Schema(
     }
 )
 
-module.exports = 
+module.exports = User; 
+
