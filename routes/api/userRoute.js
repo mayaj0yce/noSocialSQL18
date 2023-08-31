@@ -11,7 +11,7 @@ const {
 } = require('../../controllers/usersController');
 
 // /api/users
-router.route('/').get(getUser).post(createUser);
+router.route('./').get(getUser).post(createUser);
 
 // allows the GET PUT and DELETE to be seen more clearly 
 router

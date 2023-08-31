@@ -27,8 +27,7 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'User',
     }
-    //virtual friend count retrieves length of array field 
-    // thoughts: [thoughtSchema],
+   
   },
   {
     toJSON: {

@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const userRoutes = require('./user');
-const thoughtRoutes = require('./thoughts');
+const userRoutes = require('./userRoute');
+const thoughtRoutes = require('./thoughtRoute');
 // connects to the express api, user api, and thought 
 
-router.use('/users', userRoutes);
+router.use('/user', userRoutes);
 router.use('/thought', thoughtRoutes);
 // allows the suffix of the url to call the routes.
 
