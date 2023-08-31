@@ -26,8 +26,7 @@ const userSchema = new Schema(
     thoughts: {
       type: Schema.Types.ObjectId,
       ref: 'Thought',
-    }
-   
+    },
   },
   {
     toJSON: {
@@ -36,5 +35,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model('User',userSchema);
+const User = model('User', userSchema);
+
 module.exports = User;

@@ -6,3 +6,20 @@ const userdata = [
     { username: 'SoothPersonMan', email: 'SoothPersonMan@gmail.com' },
     { username: 'Elparton8', email: 'Elparton8@gmail.com' },
   ]
+
+  userdata
+
+  thought data
+
+
+
+  seeds needs to connect to the config connection 
+
+  require user and thoughts through models 
+
+  const random Reactions Thoughts Users(RTU) req data for this
+  //module export above const (RTU)
+
+  const empty array for RTU
+
+

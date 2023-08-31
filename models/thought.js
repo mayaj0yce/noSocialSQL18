@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const reactionSchema = require('./reaction');
+const Reaction = require('./reaction')
 
 const thoughtSchema = new Schema(
     {
@@ -17,14 +17,27 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        reactions: [reactionSchema],
+        reactions: [Reaction],
     },
     {
         toJSON: {
             getters: true,
         },
     }
-)
-const Thought = model('Thought', thoughtSchema);
-module.exports = Thought, thoughtSchema;
+);
+
+
+thoughtSchema
+  .virtual('getResponses')
+  // Getter
+  .get(function () {
+    return this.responses.length;
+  });
+
+// Initialize our Video model
+
+const Thought = model('thought', thoughtSchema);
+
+module.exports = Thought;
+
 
