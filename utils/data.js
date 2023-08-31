@@ -1,25 +1,40 @@
-const userdata = [
-    { username: 'SomeGuy29', email: 'someGuy29@gmail.com' },
-    { username: 'Anotherguy9', email: 'Anotherguy9@gmail.com' },
-    { username: 'Newguy88', email: 'Newguy88@gmail.com' },
-    { username: 'TheMan56', email: 'TheMan56@gmail.com' },
-    { username: 'SoothPersonMan', email: 'SoothPersonMan@gmail.com' },
-    { username: 'Elparton8', email: 'Elparton8@gmail.com' },
-  ]
+const user = [
+{ username: '', email: '' },
+{ username: '', email: '' },
+{ username: '', email: '' },
+{ username: '', email: '' },
+{ username: '', email: '' },
+{ username: '', email: '' },
+]
 
-  userdata
+ const reaction = [
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+ ]
 
-  thought data
+ const thought = [
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
 
+ ];
 
+ const getRandomUser = () =>
+ `${getRandomArrItem(user)}${Math.floor(Math.random() * 10 + 1)}`;
 
-  seeds needs to connect to the config connection 
+ getRandomThought = ( )
+ getRandomReactions = ( )
 
-  require user and thoughts through models 
-
-  const random Reactions Thoughts Users(RTU) req data for this
-  //module export above const (RTU)
-
-  const empty array for RTU
-
-
+ module.exports = {
+    getRandomUser,
+    getRandomThought,
+    getRandomReactions,
+ };
