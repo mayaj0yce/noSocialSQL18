@@ -1,4 +1,4 @@
-const { User, Thought } = require('../models');
+const { Thought } = require('../models');
 
 module.exports = {
     //Thought is pulled in json format to allow easy reading 

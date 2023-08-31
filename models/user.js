@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const { thoughtSchema } = require('./thought');
-const { User } = require('.');
+// const { User } = require('.');
 
 const userSchema = new Schema(
   {
@@ -12,16 +12,23 @@ const userSchema = new Schema(
       min_length: 5,
     },
     email: {
-      type: DataTypes.STRING,
+      type: String,
       require: true,
       unique: true,
-      validate: {
-        isEmail: true,
-      },
+      match: [/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Please enter a valid email'],
     },
-    thoughts: [thoughtSchema],
-    friends: [userSchema],
+
+    friends:  {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+
+    thoughts: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    }
     //virtual friend count retrieves length of array field 
+    // thoughts: [thoughtSchema],
   },
   {
     toJSON: {
@@ -30,4 +37,5 @@ const userSchema = new Schema(
   }
 );
 
-module.exports = User ;
+const User = model('User',userSchema);
+module.exports = User;
