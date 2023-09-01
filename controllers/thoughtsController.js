@@ -1,11 +1,13 @@
-const { Thought } = require('../models');
+const Thought  = require('../models/thought');
 
 module.exports = {
     //Thought is pulled in json format to allow easy reading 
     async getThoughts(req, res) {
         try {
-            const thoughts = await Thought.find();
+            const thoughts = await Thought.find(req.params);
             res.json(thoughts);
+      
+      
         } catch (err) {
             res.status(500).json(err);
         }
