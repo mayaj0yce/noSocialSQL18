@@ -3,7 +3,7 @@ const Thought  = require('../models/thought');
 module.exports = {
     //Thought is pulled in json format to allow easy reading 
     async getThoughts(req, res) {
-        console.log('hello')
+        // console.log('hello')
 
         try {
             console.log( Thought.find() );
