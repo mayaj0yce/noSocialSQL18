@@ -25,17 +25,9 @@ const reaction = [
     'upvote',
 ];
 
-const getRandomUser = () =>
-    `${getRandomArrItem(user)}${Math.floor(Math.random() * 10 + 1)}`;
-
-const getRandomThought = () =>
-    `${getRandomArrItem(thought)}${Math.floor(Math.random() * 10 + 1)}`;
-
-const getRandomReactions = () =>
-    `${getRandomArrItem(reaction)}${Math.floor(Math.random() * 10 + 1)}`
 
 module.exports = {
-    getRandomUser,
-    getRandomThought,
-    getRandomReactions,
+    user,
+    thought,
+    reaction,
 };

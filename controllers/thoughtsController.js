@@ -3,10 +3,13 @@ const Thought  = require('../models/thought');
 module.exports = {
     //Thought is pulled in json format to allow easy reading 
     async getThoughts(req, res) {
+        console.log('hello')
+
         try {
+            console.log( Thought.find() );
+
             const thoughts = await Thought.find(req.params);
             res.json(thoughts);
-      
       
         } catch (err) {
             res.status(500).json(err);
@@ -44,7 +47,7 @@ module.exports = {
 
     async deleteThought(req, res) {
         try {
-            const thought = await Thought.findOneAndRemove(
+         Thought.findOneAndRemove(
                 { _id: req.params.thoughtId }
             );
 
