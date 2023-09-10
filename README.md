@@ -16,7 +16,7 @@ data has been seeded.
 open insomnia, view in order.
 
 ### Links 
-[githubLink]()
+[githubLink](git@github.com:mayaj0yce/noSocialSQL18.git)
 
 ### Challenges
 
