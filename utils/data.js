@@ -7,13 +7,14 @@ const user = [
     { username: 'Zac', email: 'smackdatzac@aol.com' },
 ]
 const thought = [
-    'Omg This is a thought',
-    'brittany you suck',
-    'herrowwww it is a bungie bug',
-    'hecklers be doing the heckle',
-    'the devil is a really good dancer',
-    'boogie like the devil baby',
-    'yuhhh this is the end ',
+    { thoughtText: 'Omg This is a thought', createdAt: '', username: 'brittany' },
+    { thoughtText: 'brittany you suck', createdAt: '', username: 'sarah' },
+    { thoughtText: 'herrowwww it is a bungie bug', createdAt: '', username: 'ezzeyE123' },
+    { thoughtText: 'hecklers be doing the heckle', createdAt: '', username: 'Zac' },
+    { thoughtText: 'the devil is a really good dancer', createdAt: '', username: 'mouse' },
+    { thoughtText: 'boogie like the devil baby', createdAt: '', username: 'nousername114' },
+    { thoughtText: 'yuhhh this is the end ', createdAt: '', username: 'mouse' },
+
 
 ]
 const reaction = [
