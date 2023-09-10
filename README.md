@@ -9,7 +9,11 @@ By using MongoDB, NoSQL and Insomnia I can view users, thoughts, and reactions. 
 - [Author](#author)
 
 ### Walkthrough
-![]()
+![VideoLink](https://youtu.be/ufrl3srLmRU)
+
+data has been seeded.
+'npm run dev'
+open insomnia, view in order.
 
 ### Links 
 [githubLink]()

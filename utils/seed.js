@@ -5,7 +5,7 @@ const { db } = require('mongodb');
 const {
     user,
     thought,
-    reaction,
+    // reaction,
 } = require('./data');
 
 // Start the seeding runtime timer
@@ -21,9 +21,10 @@ connection.once('open', async () => {
   if (userdb.length) {
     await connection.dropCollection('users');
   }
-  
+
   const result = await User.collection.insertMany(user);
   console.log(result);
+
 
   let thoughtdb = await connection.db.listCollections({thought: 'thoughts'}).toArray();
   // console.log(thoughtdb)
@@ -33,13 +34,15 @@ connection.once('open', async () => {
   const thoughtresult = await Thought.collection.insertMany(thought);
   console.log(thoughtresult);
   
-let reactiondb = await connection.db.listCollections({ reaction: 'reaction'}).toArray();
-if (reactiondb.length) {
-  await connection.dropCollection('reaction');
-}
-const reactionresult = await Thought.collection.insertMany(thought);
-  console.log(reactionresult);
-  process.exit(0);
+
+// let reactiondb = await connection.db.listCollections({ reaction: 'reaction'}).toArray();
+// if (reactiondb.length) {
+//   await connection.dropCollection('reaction');
+// }
+
+// const reactionresult = await Reaction.collection.insertMany(thought);
+//   console.log(reactionresult);
+//   process.exit(0);
 
 });
     

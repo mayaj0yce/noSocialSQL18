@@ -27,12 +27,12 @@ const thoughtSchema = new Schema(
 );
 
 
-thoughtSchema
-  .virtual('getResponses')
-  // Getter
-  .get(function () {
-    return this.responses.length;
-  });
+// thoughtSchema
+//   .virtual('getResponses')
+//   // Getter
+//   .get(function () {
+//     return this.responses.length;
+//   });
 
 // Initialize our Video model
 
