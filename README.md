@@ -3,8 +3,8 @@ By using MongoDB, NoSQL and Insomnia I can view users, thoughts, and reactions. 
 
 ## Table of Contents
 
-- [Walkthrough] (#walkthrough)
-- [Links] (#links)
+- [Walkthrough](#walkthrough)
+- [Links](#links)
 - [Challenges](#challenges) 
 - [Author](#author)
 
