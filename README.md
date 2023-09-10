@@ -18,6 +18,7 @@ open insomnia, view in order.
 ### Links 
 [githubLink](git@github.com:mayaj0yce/noSocialSQL18.git)
 
+
 ### Challenges
 
 I was met with a variety of challenges. The largest was a lack of fundamental knowledge of the Insomnia application. Through my project I had to really get it together and I now know a lot more about Insomnia. This including making project folders and creating an area for my project to reside in. Creating these allowed me to be a LOT more organized. 
